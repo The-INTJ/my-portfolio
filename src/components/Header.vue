@@ -46,7 +46,7 @@ header {
   height: 20vh;
   visibility: hidden;
 }
-.header-content{
+.header-content {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -56,5 +56,6 @@ header {
   color: white;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
+  box-shadow: 0 0 30px 1px #141b29;
 }
 </style>
