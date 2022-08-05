@@ -2,9 +2,9 @@
   <header>
     <div class="spacer"></div>
     <div class="header-content">
-      <p>{{ projects }}</p>
-      <p>{{ about }}</p>
-      <p class="the-surprise">{{ surpriseText }}</p>
+      <a href="#projects">{{ projects }}</a>
+      <a href="#about">{{ about }}</a>
+      <a href="#surprise" class="the-surprise">{{ surpriseText }}</a>
     </div>
   </header>
 </template>
@@ -38,9 +38,21 @@ export default {
 header {
   position: sticky;
   top: 0;
-  p {
+  min-width: 200px;
+  a {
+    color: white;
     padding: 15px;
+    font-weight: bolder;
+    font-size: 1.2em;
+    text-decoration: none;
+    &:hover {
+      color: lightgreen;
+    }
   }
+}
+.the-surprise {
+  visibility: hidden;
+  position: absolute;
 }
 .spacer {
   height: 20vh;

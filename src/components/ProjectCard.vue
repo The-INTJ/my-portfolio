@@ -1,7 +1,9 @@
 <template>
   <div class="a-card">
     <div class="blur-container"></div>
-    <img v-bind:src="image" />
+    <a :href="link">
+      <img v-bind:src="image" />
+    </a>
     <div class="content-container">
       <div class="skew-cont">
         <h3 class="project-title">{{ projectName }}</h3>
@@ -43,18 +45,30 @@ export default {
   overflow: hidden;
   border-radius: 10px;
   margin: 25px;
+  background-color: lightgrey;
 
   transform: skew(45deg, 0);
 
-  > * {
+  * {
     transform: skew(-45deg, 0);
   }
 }
 img {
-  width: 160%;
-  height: 160%;
+  -webkit-transition: transform 0.5s ease-in-out;
+    -moz-transition: transform 0.5s ease-in-out;
+    transition: transform 0.5s ease-in-out;
+}
+img:hover {
+ 
+    transform: skew(-45deg, 0) scale(1.5);
+    -webkit-transition: transform 0.5s ease-in-out;
+    -moz-transition: transform 0.5s ease-in-out;
+    transition: transform 0.5s ease-in-out;
+}
+img {
+  width: 100%;
   position: absolute;
-  left: -265px;
+  left: 200px;
   transform: skew(30deg, 0);
 }
 .content-container {
@@ -74,6 +88,7 @@ img {
   width: 100%;
   backdrop-filter: blur(10px);
   z-index: 1;
+  transform: skew(0, 0);
 }
 .skew-cont {
   background-color: #141b29;
