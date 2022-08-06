@@ -87,6 +87,9 @@ h2 {
 .main {
   display: flex;
   flex-direction: row;
+  @media  (max-width: 1000px) {
+    flex-direction: column;
+  }
 }
 .header-container {
   flex-grow: 1;

@@ -62,6 +62,9 @@ header {
 .spacer {
   height: 20vh;
   visibility: hidden;
+  @media (max-width: 1000px) {
+    display: none;
+  }
 }
 .header-content {
   display: flex;
@@ -74,5 +77,9 @@ header {
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
   box-shadow: 0 0 30px 1px #141b29;
+  @media (max-width: 1000px) {
+    flex-direction: row;
+    height: 100%;
+  }
 }
 </style>

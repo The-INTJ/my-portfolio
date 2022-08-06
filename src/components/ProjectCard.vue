@@ -52,6 +52,10 @@ export default {
   * {
     transform: skew(45deg, 0);
   }
+  @media (max-width: 800px) {
+    max-width: 375px;
+    height: 300px;
+  }
 }
 img {
   -webkit-transition: transform 0.5s ease-in-out;
@@ -70,6 +74,11 @@ img {
   position: absolute;
   left: 200px;
   transform: skew(-30deg, 0);
+  @media (max-width: 800px) {
+    left: -100px;
+    top: -70px;
+    width: 140%;
+  }
 }
 .content-container {
   position: absolute;
@@ -80,6 +89,14 @@ img {
   height: -webkit-fill-available;
   z-index: 2;
   right: 40%;
+  @media (max-width: 800px) {
+    right: -10%;
+    bottom: -20%;
+    justify-content: center;
+    * {
+      margin-top: 20px;
+    }
+  }
 }
 .blur-container {
   position: absolute;
@@ -90,6 +107,14 @@ img {
   backdrop-filter: blur(10px);
   z-index: 1;
   transform: skew(0, 0);
+  @media (max-width: 800px) {
+    left: 0;
+    bottom: 10%;
+    height: 50%;
+  }
+}
+@media (max-width: 800px) {
+  
 }
 .skew-cont {
   background-color: #141b29;
