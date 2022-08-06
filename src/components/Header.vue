@@ -4,6 +4,7 @@
     <div class="header-content">
       <a href="#projects">{{ projects }}</a>
       <a href="#about">{{ about }}</a>
+      <a href="#contact">{{ contact}}</a>
       <a href="#surprise" class="the-surprise">{{ surpriseText }}</a>
     </div>
   </header>
@@ -24,6 +25,10 @@ export default {
     about: {
       type: String,
       default: "About",
+    },
+    contact: {
+      type: String,
+      default: "Contact"
     },
     surpriseText: {
       type: String,

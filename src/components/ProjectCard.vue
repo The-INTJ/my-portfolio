@@ -45,12 +45,12 @@ export default {
   overflow: hidden;
   border-radius: 10px;
   margin: 25px;
-  background-color: lightgrey;
+  background-color: lightgreen;
 
-  transform: skew(45deg, 0);
+  transform: skew(-45deg, 0);
 
   * {
-    transform: skew(-45deg, 0);
+    transform: skew(45deg, 0);
   }
 }
 img {
@@ -60,7 +60,7 @@ img {
 }
 img:hover {
  
-    transform: skew(-45deg, 0) scale(1.5);
+    transform: skew(45deg, 0) scale(1.5);
     -webkit-transition: transform 0.5s ease-in-out;
     -moz-transition: transform 0.5s ease-in-out;
     transition: transform 0.5s ease-in-out;
@@ -69,7 +69,7 @@ img {
   width: 100%;
   position: absolute;
   left: 200px;
-  transform: skew(30deg, 0);
+  transform: skew(-30deg, 0);
 }
 .content-container {
   position: absolute;
@@ -79,6 +79,7 @@ img {
   align-items: flex-start;
   height: -webkit-fill-available;
   z-index: 2;
+  right: 40%;
 }
 .blur-container {
   position: absolute;
@@ -94,20 +95,23 @@ img {
   background-color: #141b29;
   color: white;
   border-radius: 10px;
-  transform: skew(45deg);
+  width: 270px;
+  transform: skew(-45deg);
   > * {
-    transform: skew(-45deg);
+    transform: skew(45deg);
   }
 
+align-self: flex-end;
+
   &.alignment {
-    margin-left: 85px;
+    margin-right: 85px;
+    text-align: left;
   }
 }
 .project-title {
   margin: 10px 15px;
 }
 .project-description {
-  margin: 10px 15px;
-  max-width: 200px;
+  margin: 10px 35px;
 }
 </style>
