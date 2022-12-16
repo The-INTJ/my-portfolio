@@ -1,0 +1,129 @@
+@import "../variables/breakpoints.scss";
+@import "../variables/colors.scss";
+@import "../variables/fonts.scss";
+@import "../variables/spacing.scss";
+
+@mixin box-shadow-hoverstate() {
+  box-shadow: 2px 3px $black;
+}
+
+@mixin card-shadow() {
+  box-shadow: 0 13px 27px -5px hsla(240, 30.1%, 28%, 0.25),
+    0 8px 16px -8px hsla(0, 0%, 0%, 0.3), 0 -6px 16px -6px hsla(0, 0%, 0%, 0.03);
+}
+
+@mixin default-button-styles() {
+  height: fit-content;
+  background-color: $hymnal-red;
+  border-radius: $border-radius-default;
+  border-width: 0;
+  color: $silver-lettering;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: $font-size-normal;
+  font-weight: $font-weight-bold;
+  line-height: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 10px 12px;
+  text-align: center;
+  transition: all 200ms;
+  vertical-align: baseline;
+  white-space: nowrap;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+
+  &:hover {
+    transition-duration: 50ms;
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  }
+}
+
+@mixin default-input-styles() {
+  height: 30px;
+  border-radius: $border-radius-default;
+  border: 1px solid $silver-lettering;
+
+  &:hover {
+    @include card-shadow();
+  }
+
+  &:focus,
+  &:focus-within {
+    @include card-shadow();
+    outline: 1px solid $hymnal-red;
+  }
+}
+
+@mixin dark-text-link() {
+
+  color: #141b29;
+  text-decoration: none;
+  position: relative;
+  transition: all 0.2s;
+
+  &:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: lightgreen;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.2s;
+  }
+
+  &:hover {
+    color: white;
+    text-shadow: 0px 0px 10px #141b29;
+
+    &:before {
+      visibility: visible;
+      transform: scaleX(1);
+    }
+  }
+
+  &:active {
+    color: lightgreen;
+  }
+}
+
+@mixin default-text-link() {
+  color: white;
+  text-decoration: none;
+  position: relative;
+  transition: all 0.2s;
+
+  &:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: white;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.2s;
+  }
+
+  &:hover {
+    color: lightgreen;
+    text-shadow: 0px 0px 10px white;
+
+    &:before {
+      visibility: visible;
+      transform: scaleX(1);
+    }
+  }
+
+  &:active {
+    color: lightgreen;
+  }
+
+}

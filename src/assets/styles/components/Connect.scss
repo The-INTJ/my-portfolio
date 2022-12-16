@@ -1,0 +1,14 @@
+@import '../utility/utility.scss';
+
+.connect {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+    width: 100%;
+}
+
+a {
+    @include dark-text-link();
+}

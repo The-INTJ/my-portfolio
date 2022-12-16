@@ -10,28 +10,34 @@
         <h4>Professional Experience</h4>
         <p class="banner-text">Perficient</p>
         <p class="description">
-          Drew works as Technical Consultant, specializing in front end
-          frameworks, WACG, and enjoys learning the best high-level approaches
-          for organizing code. He has worked with a variety of team sizes and
-          delivered work for enterprise-scale Websites.
+          Drew is an Associate Technical Consultant at Perficient, where he has
+          worked as a developer on multiple SXA sites. In this role, he has
+          gained experience leading deploys, operating and monitoring production
+          resources, and overseeing the codebase. He has also built components
+          from scratch and architected style and accessibility efforts.
         </p>
         <p class="description">
-          His current roles have worked with React, JavaScript, SASS/SCSS, C#,
-          and involved management and deployment through Azure.
+          Drew is skilled in a range of technologies, including languages such
+          as JavaScript, Typescript, JSX, HTML, CSS, and SASS, as well as
+          frameworks like Next.js, ASP.NET, and libraries such as jQuery,
+          React.js, and SXA. He has experience with content management systems
+          like Sitecore and cloud deployment platforms like Azure and Vercel.
+        </p>
+        <p class="description">
+          In addition to these technologies, Drew is proficient in Git Bash,
+          Linux, Solr, Azure DevOps, and Visual Studio.Drew works as Technical
+          Consultant, specializing in front end frameworks, WACG, and enjoys
+          learning the best high-level approaches for organizing code. He has
+          worked with a variety of team sizes and delivered work for
+          enterprise-scale Websites.
         </p>
       </div>
       <div class="sub-section">
         <h4>Education</h4>
         <p class="banner-text">University of Georgia</p>
         <p class="description">
-          Drew works as Technical Consultant, specializing in front end
-          frameworks, WACG, and enjoys learning the best high-level approaches
-          for organizing code. He has worked with a variety of team sizes and
-          delivered work for enterprise-scale Websites.
-        </p>
-        <p class="description">
-          His current roles have worked with React, JavaScript, SASS/SCSS, C#,
-          and involved management and deployment through Azure.
+          Drew attended the University of Georgia, where he led the Computer
+          Science Interview Prep Club, and graduated Cum Laude.
         </p>
       </div>
     </div>
@@ -47,11 +53,11 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 p {
-    font-size: large;
-    text-align: left;
+  font-size: large;
+  text-align: left;
 }
 h4 {
-    font-size: larger;
+  font-size: larger;
 }
 .about-container {
   display: flex;

@@ -1,17 +1,17 @@
 <template>
   <div class="a-card">
     <div class="blur-container"></div>
-    <a :href="link">
-      <img v-bind:src="image" />
-    </a>
     <div class="content-container">
       <div class="skew-cont">
-        <h3 class="project-title">{{ projectName }}</h3>
+        <a class="text" :href="link"><h3 class="project-title">{{ projectName }}</h3></a>
       </div>
       <div class="skew-cont alignment">
-        <p class="project-description">{{ about }}</p>
+        <a class="text align" :href="link"><p class="project-description">{{ about }}</p></a>
       </div>
     </div>
+    <a :href="link" tabindex="-1">
+      <img v-bind:src="image" />
+    </a>
   </div>
 </template>
 
@@ -33,110 +33,11 @@ export default {
     },
     image: {
       type: String,
-      default: require("../assets/codeImage.jpeg"),
+      default: require("../assets/coding2.jpg"),
     },
   },
 };
 </script>
 <style scoped lang="scss">
-.a-card {
-  height: 200px;
-  width: 600px;
-  overflow: hidden;
-  border-radius: 10px;
-  margin: 25px;
-  background-color: lightgreen;
-
-  transform: skew(-45deg, 0);
-
-  * {
-    transform: skew(45deg, 0);
-  }
-  @media (max-width: 800px) {
-    max-width: 375px;
-    height: 300px;
-  }
-}
-img {
-  -webkit-transition: transform 0.5s ease-in-out;
-    -moz-transition: transform 0.5s ease-in-out;
-    transition: transform 0.5s ease-in-out;
-}
-img:hover {
- 
-    transform: skew(45deg, 0) scale(1.5);
-    -webkit-transition: transform 0.5s ease-in-out;
-    -moz-transition: transform 0.5s ease-in-out;
-    transition: transform 0.5s ease-in-out;
-}
-img {
-  width: 100%;
-  position: absolute;
-  left: 200px;
-  transform: skew(-30deg, 0);
-  @media (max-width: 800px) {
-    left: -100px;
-    top: -70px;
-    width: 140%;
-  }
-}
-.content-container {
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: flex-start;
-  height: -webkit-fill-available;
-  z-index: 2;
-  right: 40%;
-  @media (max-width: 800px) {
-    right: -10%;
-    bottom: -20%;
-    justify-content: center;
-    * {
-      margin-top: 20px;
-    }
-  }
-}
-.blur-container {
-  position: absolute;
-  left: -250px;
-  content: "";
-  height: 100%;
-  width: 100%;
-  backdrop-filter: blur(10px);
-  z-index: 1;
-  transform: skew(0, 0);
-  @media (max-width: 800px) {
-    left: 0;
-    bottom: 10%;
-    height: 50%;
-  }
-}
-@media (max-width: 800px) {
-  
-}
-.skew-cont {
-  background-color: #141b29;
-  color: white;
-  border-radius: 10px;
-  width: 270px;
-  transform: skew(-45deg);
-  > * {
-    transform: skew(45deg);
-  }
-
-align-self: flex-end;
-
-  &.alignment {
-    margin-right: 85px;
-    text-align: left;
-  }
-}
-.project-title {
-  margin: 10px 15px;
-}
-.project-description {
-  margin: 10px 35px;
-}
+@import "../assets/styles/components/ProjectCard.scss";
 </style>

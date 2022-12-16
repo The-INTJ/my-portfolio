@@ -1,0 +1,59 @@
+@import '../utility/utility.scss';
+
+body {
+  margin: 0;
+  background-color: rgb(215, 215, 215);
+}
+h1 {
+  font-size: 3em;
+}
+h2 {
+  font-size: 2em;
+  position: relative;
+  &::before,
+  &::after{
+    content: "";
+    display: inline-block;
+    height: 1em;
+    width: 5px;
+    border: 1px solid lightgreen;
+    position: absolute;
+    background-color: lightgreen;
+    transform: skew(-45deg, 0);
+    left: -25px;
+  }
+  &::after {
+    left: -40px;
+  }
+  @media (max-width: 800px) {
+    
+  }
+}
+.main {
+  display: flex;
+  flex-direction: row;
+  @include layout-after(mobile) {
+    flex-direction: column;
+  }
+}
+
+.content-container {
+  flex-grow: 30;
+}
+.short-desc {
+  font-style: italic;
+}
+.card-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 100px;
+}
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+}

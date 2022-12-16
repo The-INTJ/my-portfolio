@@ -1,0 +1,42 @@
+@import "../utility/utility.scss";
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  
+}
+
+#app {
+  overflow: hidden;
+}
+
+.page-container {
+  margin: 3%;
+}
+
+.page-overlay {
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: $grey_transluscent;
+}
+
+a {
+  color: $silver-lettering;
+  text-decoration: none;
+  font-family: $default-font;
+  font-weight: $font-weight-bold;
+}
+
+button {
+  @include default-button-styles();
+}
+
+input {
+  @include default-input-styles();
+}
