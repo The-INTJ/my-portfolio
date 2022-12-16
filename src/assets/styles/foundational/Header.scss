@@ -7,8 +7,12 @@ header {
   z-index: 2;
 
   a {
+    padding: $default-padding;
     @include default-text-link();
     font-size: x-large;
+    @include layout-after(mobile) {
+      padding: $mobile-padding;
+    }
   }
 
   @include layout-after(tablet) {

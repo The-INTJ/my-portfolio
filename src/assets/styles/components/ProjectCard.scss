@@ -89,6 +89,7 @@ img {
 }
 
 .blur-container {
+    border-radius: $border-radius-default;
     position: absolute;
     height: inherit;
     width: 300px;
